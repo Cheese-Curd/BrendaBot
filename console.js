@@ -78,4 +78,4 @@ y.addListener("data", res => {
     }
 })
 
-bot.login("OTAxNDI0MDUyODY5MTQ0NTk2.YXPqkQ.0n37zeGnQdcxZiyRfFYoHqXwXhY")
+bot.login("")
