@@ -1,15 +1,14 @@
 {
   "name": "brenda",
-  "version": "1.0.0",
+  "version": "1.1",
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "author": "Eliana",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^13.2.0"
+    "eris": "^0.17.2"
   }
 }
