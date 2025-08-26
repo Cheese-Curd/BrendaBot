@@ -42,21 +42,22 @@ bot.on('messageCreate', async msg =>
 });
 
 bot.on('messageCreate', msg => {
-	var a = Math.floor(Math.random() * 100)
+	var rand = Math.random()
 	if (!msg.channel.name == 'vent' && msg.author.id == "841301874749603840")
 	{
 		if (msg.content.includes(george.length))
 		{
 			var insult = insults[Math.floor(Math.random() * (insults.length - 1)) + 1]
-			bot.send(`<@841301874749603840>, ${insult}`);
+			bot.createMessage(msg.channel.id, `<@841301874749603840>, ${insult}`);
 		}
 	}
 	else
 	{
-		if (a == 30 || a == 100)
-			bot.send(`${msg.author}, ${compliment()}`);
-		else
-			log(4, `Random number per message sent: ${a}`)
+		if (rand < 0.3)
+		{
+			bot.createMessage(msg.channel.id, `${msg.author}, ${compliment()}`);
+			log(4, `Random Compliment (${rand})`);
+		}
 	}
 });
 
