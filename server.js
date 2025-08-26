@@ -53,7 +53,7 @@ bot.on('messageCreate', msg => {
 	}
 	else
 	{
-		if (rand < 60)
+		if (rand < 60 && msg.author.id ~= 901424052869144596)
 		{
 			bot.createMessage(msg.channel.id, `${msg.author.mention}, ${compliment()}`);
 			log(4, `Random Compliment (${rand})`);
