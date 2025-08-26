@@ -42,7 +42,7 @@ bot.on('messageCreate', async msg =>
 });
 
 bot.on('messageCreate', msg => {
-	var rand = Math.random()
+	var rand = Math.floor(Math.random() * 100)
 	if (!msg.channel.name == 'vent' && msg.author.id == "841301874749603840")
 	{
 		if (msg.content.includes(george.length))
@@ -53,9 +53,9 @@ bot.on('messageCreate', msg => {
 	}
 	else
 	{
-		if (rand < 0.3)
+		if (rand < 60)
 		{
-			bot.createMessage(msg.channel.id, `${msg.author}, ${compliment()}`);
+			bot.createMessage(msg.channel.id, `${msg.author.mention}, ${compliment()}`);
 			log(4, `Random Compliment (${rand})`);
 		}
 	}
